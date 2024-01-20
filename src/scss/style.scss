@@ -1,0 +1,7 @@
+@forward './styles/reset';
+@forward './styles/utilities';
+@forward './styles/common';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

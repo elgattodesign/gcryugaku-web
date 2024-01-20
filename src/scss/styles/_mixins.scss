@@ -1,0 +1,61 @@
+@use './variables' as *;
+
+// mediaququery
+@mixin xlarge {
+  @media screen and (max-width: $xlarge) {
+    @content;
+  }
+}
+@mixin large {
+  @media screen and (max-width: $large) {
+    @content;
+  }
+}
+@mixin medium {
+  @media screen and (max-width: $medium) {
+    @content;
+  }
+}
+@mixin small {
+  @media (max-width: ($small)) {
+    @content;
+  }
+}
+@mixin medium-only {
+  @media screen and (min-width: $small) and (max-width: $medium) {
+    @content;
+  }
+}
+
+// text
+@mixin headline($font-size: 1.8rem, $color: $text-bs) {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: $font-size;
+  line-height: 150%;
+  font-weight: bold;
+  color: $color;
+}
+
+@mixin bodytxt($font-size: 1.4rem, $weight: normal) {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: $font-size;
+  line-height: 180%;
+  font-weight: $weight;
+  color: $text-bs;
+}
+
+@mixin bodytxt-en($font-size: 1.4rem, $weight: normal) {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: $font-size;
+  line-height: 180%;
+  font-weight: $weight;
+  color: $text-bs;
+}
+
+@mixin linktxt($font-size: 1.4rem, $weight: normal) {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: $font-size;
+  line-height: 150%;
+  font-weight: $weight;
+  color: $brand-bs;
+}
